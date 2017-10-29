@@ -1,5 +1,6 @@
 # bja-ngx-pagination
 
+## Pagination component for angular 2+
 ## Simple example
 
 Install with npm:
