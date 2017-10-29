@@ -1,19 +1,10 @@
 # bja-ngx-pagination
 
-## Installation
+## Simple example
 
-To install this library, run:
-
+Install with npm:
 ```bash
 $ npm install bja-ngx-pagination --save
-```
-
-## Consuming your library
-
-Once you have published your library to npm, you can import your library in any Angular application by running:
-
-```bash
-$ npm install bja-ngx-pagination
 ```
 
 and then from your Angular `AppModule`:
@@ -25,7 +16,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 // Import your library
-import { SampleModule } from 'bja-ngx-pagination';
+import { BjaPagination } from 'bja-ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -35,7 +26,7 @@ import { SampleModule } from 'bja-ngx-pagination';
     BrowserModule,
 
     // Specify your library as an import
-    LibraryModule
+    BjaPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -43,16 +34,23 @@ import { SampleModule } from 'bja-ngx-pagination';
 export class AppModule { }
 ```
 
-Once your library is imported, you can use its components, directives and pipes in your Angular application:
+use it in Your component template:
 
 ```xml
-<!-- You can now use your library component in app.component.html -->
-<h1>
-  {{title}}
-</h1>
-<sampleComponent></sampleComponent>
+<bja-pagination
+  (pageChanged)="paginationUpdate($event)"
+  [limit]="20"
+  [currentPage]="page"
+  [totalItems]="totalItems"
+></bja-pagination>
 ```
 
+ and handle pagination event in component class:
+```typescript
+paginationUpdate(event) {
+    this.getPage(event.page, this.limit);
+  }
+```
 ## Development
 
 To generate all `*.js`, `*.d.ts` and `*.metadata.json` files:
