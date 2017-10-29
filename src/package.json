@@ -1,0 +1,28 @@
+{
+  "name": "bja-ngx-pagination",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bja1011/bja-ngx-pagination"
+  },
+  "author": {
+    "name": "Adam Kaczmarek",
+    "email": "adam@bearsoft.pl"
+  },
+  "keywords": [
+    "angular 2, pagination, ngx"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bja1011/bja-ngx-pagination/issues"
+  },
+  "main": "bja-ngx-pagination.umd.js",
+  "module": "bja-ngx-pagination.js",
+  "jsnext:main": "bja-ngx-pagination.js",
+  "typings": "bja-ngx-pagination.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^4.0.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
+}

@@ -1,0 +1,37 @@
+<div class="bja-pagination">
+
+  <ng-container *ngIf="currentPage > 1">
+    <button class="nav-left" (click)="setPage(currentPage - 1)">
+      <
+    </button>
+  </ng-container>
+
+  <ng-container *ngIf="showFirst">
+    <button class="nav-first" [class.active]="1 == currentPage" (click)="setPage(1)">
+      1
+    </button>
+    <span class="bullet">...</span>
+  </ng-container>
+
+  <button class="nav-page"
+          *ngFor="let page of pages"
+          [class.active]="page == currentPage"
+          (click)="setPage(page)">
+    {{ page }}
+  </button>
+
+  <ng-container *ngIf="showLast">
+    <span class="bullet">...</span>
+    <button class="nav-last" [class.active]="totalPages == currentPage"
+            (click)="setPage(totalPages)">
+      {{ totalPages }}
+    </button>
+  </ng-container>
+
+  <ng-container *ngIf="currentPage < totalPages-1">
+    <button class="nav-right" (click)="setPage(currentPage + 1)">
+      >
+    </button>
+  </ng-container>
+
+</div>
