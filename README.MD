@@ -2,6 +2,9 @@
 
 ## Pagination component for angular 2+
 
+### Demo
+[Demo on Stackblitz](https://stackblitz.com/edit/bja-ngx-pagination-demo?file=app%2Fapp.component.ts)
+
 ### Install with npm:
 
 ```bash
