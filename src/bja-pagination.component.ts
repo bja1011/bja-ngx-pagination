@@ -65,8 +65,6 @@ export class BjaPaginationComponent implements OnChanges {
     }
     this.showFirst = this.pages[0] > 1;
     this.showLast = this.pages[pagesShow - 1] < this.totalPages;
-
-    console.log(this.pages)
   }
 
 }
