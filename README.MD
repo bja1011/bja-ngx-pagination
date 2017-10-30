@@ -38,9 +38,9 @@ use it in Your component template:
 ```xml
 <bja-pagination
   (pageChanged)="handlePaginationEvent($event)"
-  [limit]="20"
   [currentPage]="page"
   [totalItems]="totalItems"
+  [limit]="20"
 ></bja-pagination>
 ```
 
@@ -54,24 +54,10 @@ handlePaginationEvent(event) {
 ```
 ## API
 
-* **`pageChanged`**  [event handler] - will be invoked when the page changed. 
-* **`limit`**  [`number`] - items to show per page. 
-* **`currentPage`** [`number`] - **required** current page number.
+* **`pageChanged`** [`event handler`] - will be invoked when the page was changed. 
+* **`currentPage`** [`number`] - **required** - current page number.
 * **`totalItems`** [`number`] - **required** - total number of items.
-## Development
+* **`limit`** [`number`] - items to show per page. Default: `5`. 
 
-To generate all `*.js`, `*.d.ts` and `*.metadata.json` files:
 
-```bash
-$ npm run build
-```
-
-To lint all `*.ts` files:
-
-```bash
-$ npm run lint
-```
-
-## License
-
-MIT © [Adam Kaczmarek](mailto:bja1011@gmail.com)
+MIT © [Adam Kaczmarek](mailto:adam@bearsoft.pl)
