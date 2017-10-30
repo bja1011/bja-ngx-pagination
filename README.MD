@@ -1,14 +1,14 @@
 # bja-ngx-pagination
 
 ## Pagination component for angular 2+
-## Simple example
 
-Install with npm:
+### Install with npm:
+
 ```bash
-$ npm install bja-ngx-pagination --save
+npm install bja-ngx-pagination --save
 ```
 
-and then from your Angular `AppModule`:
+### In your Angular `AppModule`:
 
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
@@ -25,8 +25,6 @@ import { BjaPagination } from 'bja-ngx-pagination';
   ],
   imports: [
     BrowserModule,
-
-    // Specify your library as an import
     BjaPaginationModule
   ],
   providers: [],
@@ -39,7 +37,7 @@ use it in Your component template:
 
 ```xml
 <bja-pagination
-  (pageChanged)="paginationUpdate($event)"
+  (pageChanged)="handlePaginationEvent($event)"
   [limit]="20"
   [currentPage]="page"
   [totalItems]="totalItems"
@@ -48,10 +46,18 @@ use it in Your component template:
 
  and handle pagination event in component class:
 ```typescript
-paginationUpdate(event) {
-    this.getPage(event.page, this.limit);
+handlePaginationEvent(event) {
+    
+    //sample method for fetching data
+    this.getPage(event.page);
   }
 ```
+## API
+
+* **`pageChanged`**  [event handler] - will be invoked when the page changed. 
+* **`limit`**  [`number`] - items to show per page. 
+* **`currentPage`** [`number`] - **required** current page number.
+* **`totalItems`** [`number`] - **required** - total number of items.
 ## Development
 
 To generate all `*.js`, `*.d.ts` and `*.metadata.json` files:
