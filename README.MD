@@ -1,6 +1,7 @@
 # bja-ngx-pagination
 
 ## Pagination component for angular 2+
+```* new features in development *```
 
 ### Demo
 [Demo on Stackblitz](https://stackblitz.com/edit/bja-ngx-pagination-demo?file=app%2Fapp.component.ts)
