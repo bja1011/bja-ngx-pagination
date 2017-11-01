@@ -60,7 +60,7 @@ handlePaginationEvent(event) {
 * **`pageChanged`** [`event handler`] - will be invoked when the page was changed. 
 * **`currentPage`** [`number`] - **required** - current page number.
 * **`totalItems`** [`number`] - **required** - total number of items.
-* **`limit`** [`number`] - items to show per page. Default: `5`. 
+* **`limit`** [`number`] -  **required** - items per page.
 
 
 MIT © [Adam Kaczmarek](mailto:adam@bearsoft.pl)

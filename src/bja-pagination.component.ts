@@ -18,7 +18,7 @@ export class BjaPaginationComponent implements OnChanges {
   @Input() currentPage;
 
   // Default limit if not passed from parent
-  @Input() limit = 5;
+  @Input() limit;
   @Input() forceUpdate: any;
 
   showFirst: boolean;
