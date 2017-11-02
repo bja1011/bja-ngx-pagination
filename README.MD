@@ -62,6 +62,8 @@ handlePaginationEvent(event) {
 * **`currentPage`** [`number`] - **required** - current page number.
 * **`totalItems`** [`number`] - **required** - total number of items.
 * **`limit`** [`number`] -  **required** - items per page.
+* **`hideLeftNav`** [`number`] -  **optional** - hide left navigation button. Default is `false`.
+* **`hideRightNav`** [`number`] -  **optional** - hide right navigation button. Default is `false`.
 
 
 MIT © [Adam Kaczmarek](mailto:adam@bearsoft.pl)

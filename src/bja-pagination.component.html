@@ -1,6 +1,6 @@
 <div class="bja-pagination">
 
-  <ng-container *ngIf="currentPage > 1">
+  <ng-container *ngIf="currentPage > 1 && !hideLeftNav">
     <button class="nav-left" (click)="setPage(currentPage - 1)">
       <
     </button>
@@ -28,7 +28,7 @@
     </button>
   </ng-container>
 
-  <ng-container *ngIf="currentPage < totalPages-1">
+  <ng-container *ngIf="currentPage < totalPages-1 && !hideRightNav">
     <button class="nav-right" (click)="setPage(currentPage + 1)">
       >
     </button>

@@ -14,11 +14,14 @@ const pagesShow: number = 3;
 export class BjaPaginationComponent implements OnChanges {
 
   @Output() pageChanged: EventEmitter<any> = new EventEmitter<any>();
-  @Input() totalItems;
-  @Input() currentPage;
+  @Input() totalItems: number;
+  @Input() currentPage: number;
+
+  @Input() hideLeftNav = false;
+  @Input() hideRightNav = false;
 
   // Default limit if not passed from parent
-  @Input() limit;
+  @Input() limit: number;
   @Input() forceUpdate: any;
 
   showFirst: boolean;
